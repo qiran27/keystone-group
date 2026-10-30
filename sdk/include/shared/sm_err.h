@@ -1,0 +1,63 @@
+#ifndef __SM_ERR_H__
+#define __SM_ERR_H__
+
+#define SBI_ERR_SM_ENCLAVE_SUCCESS                     0
+#define SBI_ERR_SM_ENCLAVE_UNKNOWN_ERROR               100000
+#define SBI_ERR_SM_ENCLAVE_INVALID_ID                  100001
+#define SBI_ERR_SM_ENCLAVE_INTERRUPTED                 100002
+#define SBI_ERR_SM_ENCLAVE_PMP_FAILURE                 100003
+#define SBI_ERR_SM_ENCLAVE_NOT_RUNNABLE                100004
+#define SBI_ERR_SM_ENCLAVE_NOT_DESTROYABLE             100005
+#define SBI_ERR_SM_ENCLAVE_REGION_OVERLAPS             100006
+#define SBI_ERR_SM_ENCLAVE_NOT_ACCESSIBLE              100007
+#define SBI_ERR_SM_ENCLAVE_ILLEGAL_ARGUMENT            100008
+#define SBI_ERR_SM_ENCLAVE_NOT_RUNNING                 100009
+#define SBI_ERR_SM_ENCLAVE_NOT_RESUMABLE               100010
+#define SBI_ERR_SM_ENCLAVE_EDGE_CALL_HOST              100011
+#define SBI_ERR_SM_ENCLAVE_NOT_INITIALIZED             100012
+#define SBI_ERR_SM_ENCLAVE_NO_FREE_RESOURCE            100013
+#define SBI_ERR_SM_ENCLAVE_SBI_PROHIBITED              100014
+#define SBI_ERR_SM_ENCLAVE_ILLEGAL_PTE                 100015
+#define SBI_ERR_SM_ENCLAVE_NOT_FRESH                   100016
+#define SBI_ERR_SM_ENCLAVE_FATAL_FAULT                 100017
+#define SBI_ERR_SM_DEPRECATED                          100099
+#define SBI_ERR_SM_NOT_IMPLEMENTED                     100100
+#define SBI_ERR_SM_SEC_BUSY                            100101
+#define SBI_ERR_SM_SEC_NOT_CONFIGURED                  100102
+#define SBI_ERR_SM_YXSTM_STALE_EPOCH                   100103
+#define SBI_ERR_SM_YXSTM_PHASE                         100104
+#define SBI_ERR_SM_YXSTM_ALREADY_ACQUIRED              100105
+#define SBI_ERR_SM_YXSTM_NOT_ACQUIRED                  100106
+#define SBI_ERR_SM_YXSTM_PROTOCOL_INCOMPLETE           100107
+#define SBI_ERR_SM_GROUP_BAD_STATE                     100108
+#define SBI_ERR_SM_GROUP_STALE_GENERATION              100109
+#define SBI_ERR_SM_ENCLAVE_STALE_GENERATION            100110
+#define SBI_ERR_SM_GROUP_COHERENCE_TIMEOUT              100111
+#define SBI_ERR_SM_GROUP_COHERENCE_OFFLINE              100112
+#define SBI_ERR_SM_GROUP_COHERENCE_BUSY                 100113
+#define SBI_ERR_SM_GROUP_OCALL_TIMEOUT                   100114
+#define SBI_ERR_SM_GROUP_OCALL_CANCELLED                 100115
+#define SBI_ERR_SM_GROUP_EVENT_QUEUE_FULL                100116
+#define SBI_ERR_SM_GROUP_WATCHDOG                        100117
+#define SBI_ERR_SM_GROUP_PAUSED                          100118
+#define SBI_ERR_SM_ABI_UNSUPPORTED                       100119
+#define SBI_ERR_SM_ABI_BAD_SIZE                          100120
+#define SBI_ERR_SM_ABI_BAD_FEATURE                       100121
+#define SBI_ERR_SM_GROUP_HOST_SERVICE                     100122
+#define SBI_ERR_SM_GROUP_VECTOR_UNSUPPORTED                100123
+#define SBI_ERR_SM_GROUP_HEARTBEAT_SEQUENCE                100124
+#define SBI_ERR_SM_GROUP_HEARTBEAT_SOURCE_PENDING          100125
+#define SBI_ERR_SM_GROUP_OCALL_ABANDONED                   100126
+
+#define SBI_ERR_SM_PMP_SUCCESS                         0
+#define SBI_ERR_SM_PMP_REGION_SIZE_INVALID             100020
+#define SBI_ERR_SM_PMP_REGION_NOT_PAGE_GRANULARITY     100021
+#define SBI_ERR_SM_PMP_REGION_NOT_ALIGNED              100022
+#define SBI_ERR_SM_PMP_REGION_MAX_REACHED              100023
+#define SBI_ERR_SM_PMP_REGION_INVALID                  100024
+#define SBI_ERR_SM_PMP_REGION_OVERLAP                  100025
+#define SBI_ERR_SM_PMP_REGION_IMPOSSIBLE_TOR           100026
+#define SBI_ERR_SM_PMP_METADATA_EXHAUSTED              100027
+#define SBI_ERR_SM_PMP_HW_ENTRIES_EXHAUSTED            100028
+
+#endif  // __SM_ERR_H__

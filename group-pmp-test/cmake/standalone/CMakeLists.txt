@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.13)
+project(keystone_group_examples C CXX ASM)
+
+foreach(required KEYSTONE_SDK_DIR KEYSTONE_SDK_SRC_DIR KEYSTONE_EYRIE_RUNTIME GROUP_PMP_SOURCE_DIR)
+  if(NOT DEFINED ${required} OR NOT IS_DIRECTORY "${${required}}")
+    message(FATAL_ERROR "${required} must name an existing directory")
+  endif()
+endforeach()
+
+set(ENV{KEYSTONE_SDK_DIR} "${KEYSTONE_SDK_DIR}")
+include("${KEYSTONE_SDK_DIR}/cmake/macros.cmake")
+use_riscv_toolchain(64)
+include_directories(AFTER "${KEYSTONE_SDK_DIR}/include")
+foreach(module HOST EDGE VERIFIER EAPP)
+  string(TOLOWER "${module}" library)
+  set(KEYSTONE_LIB_${module} "${KEYSTONE_SDK_DIR}/lib/libkeystone-${library}.a")
+  if(NOT EXISTS "${KEYSTONE_LIB_${module}}")
+    message(FATAL_ERROR "Missing SDK library: ${KEYSTONE_LIB_${module}}")
+  endif()
+endforeach()
+
+add_custom_target(examples)
+add_subdirectory("${GROUP_PMP_SOURCE_DIR}" group-pmp-test)

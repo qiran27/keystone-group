@@ -1,0 +1,51 @@
+Plaintext Confidentiality: proposed replacement text
+ASSUMED RESULTS, PENDING EXPERIMENTAL VALIDATION.
+
+Under a controlled test image supervised by an independent experimenter, we
+extend plaintext-marker checks beyond the initially registered regions to the
+Host process's heap, stack, anonymous and shared mappings, live temporary
+buffers, and referenced pages on the exercised kernel/file I/O path. Markers
+are generated in enclave-private EPM; the negative Host collector does not
+construct or search for the complete marker. Content is matched offline by an
+independent verifier. Object/mapping inventories, successful-read ledgers,
+physical-page aliases, lifetimes and missed phases are retained separately.
+EPM and protected TSR ranges are excluded with physical-range metadata and
+their isolation is assessed by the independent access tests. Separate positive
+runs must detect every intentionally planted regional control before a negative
+run can support an expanded-scope conclusion. [All new counts and log references
+remain TBD; this paragraph describes the intended successful experiment only.]
+
+ASSUMED RESULTS, PENDING EXPERIMENTAL VALIDATION.
+If all mandatory regions and regional controls pass, the conclusion is limited
+to no observed test-plaintext marker in the covered regions and sampling times
+of the tested configurations. Missing/unreadable objects, failed workloads,
+enabled but unexamined swap/dump paths and missed mandatory phases are reported
+as coverage incomplete, not as zero-hit passes. The observation module is test
+instrumentation and does not change the assumption of an untrusted production
+kernel. Its dumps cannot establish a trustworthy negative conclusion when the
+tested kernel is allowed to fabricate evidence. The experiment neither proves
+continuous absence of leakage nor replaces side-channel or rollback analysis.
+
+Table III: keep initial evidence separate from new evidence
+Row | Scope/configuration | Snapshots/checkpoints | Negative hits | Positive controls | Status/evidence
+Initial registered-region scan | Previously reported SQLite readrandom/fillrandom, N=1/4; registered regions only | 53 / 4 | 0 | 53 detected | Initial screenshot evidence only; NOT Host/kernel expansion
+New Host-process scan | 1 MB configured / 999840 effective bytes, readrandom/fillrandom, N=1/4, Sync/Async/Adaptive, ECB capture workload, 1 repetition | TBD | TBD | TBD | TBD original maps, inventory, reads and verifier logs
+New kernel/file-path scan | Existing file cache pages, live io_uring mappings and exercised matching BIO pages; enabled swap/dump gaps disclosed | TBD | TBD | TBD | TBD page/object/PFN/lifetime evidence; unreadable means incomplete
+New regional positive controls | Separate runs: staging heap, stack, unregistered/shared mappings, Control/Data UTM, dedicated kernel page | TBD | Not applicable | Injected TBD / detected TBD | TBD exact injection addresses and matched offsets
+Unsupported capture workload/cipher combinations | GCM/ChaCha integrity fixtures are separate from the current ECB plaintext capture protocol | Not executed | Not applicable | Not applicable | unsupported; do not include in successful-run denominators
+
+The current one-repetition matrix contains 36 planned negative combinations.
+ECB capture workload support permits 12 negative runs; the other 24 are
+unsupported, not measured failures or successful zero-hit observations.
+Neither number is a measured completed count. Twelve regional positive controls
+are independent runs. The previous proposed 500 MB configuration is superseded
+for new runs only; no old data are relabeled. Optional three-repeat runs retain
+their actual repetition count in the logs.
+Do not extrapolate these SQLite findings to fio without testing its own path.
+
+Before removing either assumed-results label: reconcile every executed run ID
+with complete original logs, build/kernel identifiers, real workload validation,
+inventories and successful reads, per-region control detections, missed stages,
+and negative hits. Fill real completed/successful denominators and log references.
+If any required region is unobserved or contains plaintext, rewrite the claims
+and table to reflect that outcome rather than merely deleting these labels.

@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG "CMakeFiles/sqlite-bench.dir/benchmark.c.o" "CMakeFiles/sqlite-bench.dir/histogram.c.o" "CMakeFiles/sqlite-bench.dir/main.c.o" "CMakeFiles/sqlite-bench.dir/random.c.o" "CMakeFiles/sqlite-bench.dir/raw.c.o" "CMakeFiles/sqlite-bench.dir/sqlite3.c.o" "CMakeFiles/sqlite-bench.dir/util.c.o" -o sqlite-bench  -lpthread -ldl -lm 

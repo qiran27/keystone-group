@@ -1,0 +1,32 @@
+CPU: CPU with timer interrupt, speed 0 MHz (estimated)
+Profiling through timer interrupt
+samples  %        image name               symbol name
+1377     74.5130  h263enc                  SAD_Macroblock
+153       8.2792  h263enc                  idctref
+88        4.7619  h263enc                  MotionEstimation
+50        2.7056  h263enc                  FindHalfPel
+49        2.6515  h263enc                  Dct
+21        1.1364  h263enc                  LoadArea
+18        0.9740  h263enc                  Quant
+14        0.7576  h263enc                  InterpolateImage
+11        0.5952  no-vmlinux               (no symbols)
+8         0.4329  h263enc                  ComputeSNR
+8         0.4329  h263enc                  MB_Decode
+7         0.3788  h263enc                  Dequant
+6         0.3247  h263enc                  ChooseMode
+6         0.3247  h263enc                  ReconImage
+5         0.2706  h263enc                  CodeCoeff
+5         0.2706  h263enc                  FindMB
+3         0.1623  h263enc                  FindCBP
+3         0.1623  h263enc                  FindPred
+2         0.1082  h263enc                  Clip
+2         0.1082  h263enc                  DoPredChrom_P
+2         0.1082  h263enc                  MB_Encode
+2         0.1082  h263enc                  ReconChromBlock_P
+2         0.1082  h263enc                  putbits
+1         0.0541  h263enc                  Predict_P
+1         0.0541  h263enc                  ReconLumBlock_P
+1         0.0541  h263enc                  put_coeff
+1         0.0541  libc-2.3.5.so            _int_free
+1         0.0541  libc-2.3.5.so            _int_malloc
+1         0.0541  libc-2.3.5.so            free

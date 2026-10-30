@@ -1,0 +1,14 @@
+[global]
+filename=${FIO_FILE}
+size=${FIO_SIZE}
+ioengine=sync
+direct=0
+numjobs=1
+group_reporting=1
+randrepeat=1
+randseed=20260928
+allow_file_create=0
+
+[rand-read-100k]
+rw=randread
+bs=100000

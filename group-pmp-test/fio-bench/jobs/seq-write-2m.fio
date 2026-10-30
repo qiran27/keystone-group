@@ -1,0 +1,11 @@
+[global]
+filename=${FIO_FILE}
+size=${FIO_SIZE}
+ioengine=sync
+direct=0
+numjobs=1
+group_reporting=1
+
+[seq-write-2m]
+rw=write
+bs=2000000

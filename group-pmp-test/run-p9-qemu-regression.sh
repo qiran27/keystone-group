@@ -1,0 +1,18 @@
+#!/bin/sh
+set -eu
+
+# Run this script inside the QEMU guest after deploying group-pmp-test.
+cd "$(dirname "$0")"
+RUNNER=${GROUP_PMP_RUNNER:-./run-group-pmp-test.sh}
+TIMEOUT=${GROUP_PMP_TEST_TIMEOUT:-1800}
+export GROUP_PMP_LEASE_TEST_FALLBACK=1
+
+GROUP_PMP_TEST_MODE=smoke timeout "$TIMEOUT" "$RUNNER"
+GROUP_PMP_TEST_MODE=stress \
+GROUP_PMP_LIFECYCLE_ITERS=${GROUP_PMP_LIFECYCLE_ITERS:-100} \
+GROUP_PMP_SCHED_STRESS_ROUNDS=${GROUP_PMP_SCHED_STRESS_ROUNDS:-10} \
+GROUP_PMP_TWO_GROUP_ROUNDS=${GROUP_PMP_TWO_GROUP_ROUNDS:-10} \
+timeout "$TIMEOUT" "$RUNNER"
+GROUP_PMP_TEST_MODE=fault timeout "$TIMEOUT" "$RUNNER"
+
+echo "[p9] QEMU regression PASS"

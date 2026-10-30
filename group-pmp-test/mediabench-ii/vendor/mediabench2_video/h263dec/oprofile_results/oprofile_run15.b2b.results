@@ -1,0 +1,20 @@
+CPU: CPU with timer interrupt, speed 0 MHz (estimated)
+Profiling through timer interrupt
+samples  %        image name               symbol name
+33       31.1321  tmndec                   conv422to444
+22       20.7547  tmndec                   store_ppm_tga
+21       19.8113  tmndec                   conv420to422
+9         8.4906  tmndec                   putbyte
+5         4.7170  no-vmlinux               (no symbols)
+3         2.8302  tmndec                   idctcol
+2         1.8868  tmndec                   addblock
+2         1.8868  tmndec                   rec
+1         0.9434  tmndec                   find_pmv
+1         0.9434  tmndec                   flushbits
+1         0.9434  tmndec                   getblock
+1         0.9434  tmndec                   idct
+1         0.9434  tmndec                   idctrow
+1         0.9434  tmndec                   rec4
+1         0.9434  tmndec                   recc
+1         0.9434  tmndec                   recv
+1         0.9434  tmndec                   showbits

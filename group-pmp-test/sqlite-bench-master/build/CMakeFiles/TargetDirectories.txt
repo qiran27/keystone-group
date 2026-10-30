@@ -1,0 +1,3 @@
+/mnt/d/keystone-cp/keystone_yx/examples/secure-usb-drive/sqlite-bench-master/build/CMakeFiles/sqlite-bench.dir
+/mnt/d/keystone-cp/keystone_yx/examples/secure-usb-drive/sqlite-bench-master/build/CMakeFiles/edit_cache.dir
+/mnt/d/keystone-cp/keystone_yx/examples/secure-usb-drive/sqlite-bench-master/build/CMakeFiles/rebuild_cache.dir
