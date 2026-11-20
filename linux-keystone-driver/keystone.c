@@ -23,7 +23,7 @@ struct mutex GROUP_LIFECYCLE_mutex;
 #define   DRV_VERSION       "1.0.0-group-pmp-v6"
 
 MODULE_DESCRIPTION(DRV_DESCRIPTION);
-MODULE_AUTHOR("Dayeol Lee <dayeol@berkeley.edu>");
+MODULE_AUTHOR("Ju Wu <2813480370@qq.com>");
 MODULE_VERSION(DRV_VERSION);
 MODULE_LICENSE("Dual BSD/GPL");
 
